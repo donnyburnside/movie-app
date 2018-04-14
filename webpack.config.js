@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -113,7 +114,12 @@ const config = {
     // Extract CSS
     new ExtractTextPlugin('styles/[name].css', {
       allChunks: true
-    })
+    }),
+
+    // Copy images
+    new CopyWebpackPlugin([
+      { from: 'src/images', to: 'images' }
+    ])
   ]
 };
 
