@@ -1,3 +1,3 @@
-import 'jquery';
-import 'popper.js';
+import 'rxjs';
+
 import './styles/app';

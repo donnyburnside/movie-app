@@ -1,0 +1,20 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #fff;
+  border-bottom: 1px solid $gray-300;
+}
+
+.app-body {
+  flex: 1 0 auto;
+}
+
+.app-footer {
+  background-color: #fff;
+  border-top: 1px solid $gray-300;
+}

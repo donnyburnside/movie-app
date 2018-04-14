@@ -1,0 +1,60 @@
+<header class="app-header" role="banner">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters flex-nowrap align-items-center">
+      <div class="px-5 py-3">
+        <a href="/">{{ title }}</a>
+      </div>
+      <div class="flex-grow-1">
+        <div class="row no-gutters flex-nowrap justify-content-between align-items-center">
+          <div class="px-4 py-3">
+            <nav role="navigation">
+              <ul class="nav" role="menubar">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" routerLinkActive="active" routerLink="/" title="Home" role="menuitem">
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" routerLinkActive="active" routerLink="/movies" title="Movies" role="menuitem">
+                    Movies
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" routerLinkActive="active" routerLink="/genres" title="Genres" role="menuitem">
+                    Genres
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" routerLinkActive="active" routerLink="/about" title="About" role="menuitem">
+                    About
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="ml-auto px-4 py-3">
+            <form class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="search">{{ label }}</label>
+              </div>
+              <input class="form-control" id="search" name="search" type="search" placeholder="{{ placeholder }}">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">{{ buttonText }}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="app-body" role="main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer" role="contentinfo">
+  <div class="container p-3">
+    <small>Developed by <a href="http://www.donnyburnside.com/">Donny Burnside</a>.</small>
+  </div>
+</footer>

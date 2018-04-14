@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
 
+declare var require: (filename: string) => any;
+
 @Component({
   selector: '#app',
-  template: `<h1>Hello {{ word }}</h1>`,
+  template: require('./app.component.html')
 })
-export class AppComponent  { word = 'World'; }
+export class AppComponent {
+  title = 'Movie App';
+  label = 'Search Movies';
+  placeholder = 'Armageddon';
+  buttonText = 'Search';
+}
