@@ -1,4 +1,8 @@
-import "@angular/core";
-import './styles/app';
+import './polyfills';
+import './vendor';
 
-window.onload = () => console.log('Hello world!');
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
