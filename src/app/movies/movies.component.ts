@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store';
 
-import { IAppState } from '../models/app';
+import { IAppState } from '../models/app.model';
 import { MoviesService } from '../services/movies.service';
 
 declare var require: (filename: string) => any;

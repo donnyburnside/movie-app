@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { NgRedux } from '@angular-redux/store';
 
-import { IAppState } from '../models/app';
-import { FETCH_APP_META_DATA } from '../actions/app';
+import { IAppState } from '../models/app.model';
+import { FETCH_APP_META_DATA } from '../actions/app.actions';
 
 @Injectable()
 export class AppService {

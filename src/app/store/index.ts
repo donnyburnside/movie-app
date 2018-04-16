@@ -3,7 +3,7 @@ import { NgReduxModule, NgRedux } from '@angular-redux/store';
 import { createLogger } from 'redux-logger';
 
 import { rootReducer } from '../reducers';
-import { IAppState } from '../models/app';
+import { IAppState } from '../models/app.model';
 
 const initialState: IAppState = {
   title: '',

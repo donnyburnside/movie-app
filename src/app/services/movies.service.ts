@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { NgRedux } from '@angular-redux/store';
 
-import { IAppState } from '../models/app';
-import { FETCH_MOVIES } from '../actions/movies';
+import { IAppState } from '../models/app.model';
+import { FETCH_MOVIES } from '../actions/movies.actions';
 
 @Injectable()
 export class MoviesService {
