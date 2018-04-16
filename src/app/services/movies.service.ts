@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { NgRedux } from '@angular-redux/store';
 
 import { IAppState } from '../models/app.model';
-import { FETCH_MOVIES } from '../actions/movies.actions';
+import { FETCH_MOVIES, CLEAR_MOVIES } from '../actions/movies.actions';
 import { movies } from '../data/movies.mock-data';
 
 @Injectable()
@@ -15,6 +15,15 @@ export class MoviesService {
       type: FETCH_MOVIES,
       payload: {
         movies: movies
+      }
+    });
+  }
+
+  clearMovies() {
+    this.ngRedux.dispatch({
+      type: CLEAR_MOVIES,
+      payload: {
+        movies: []
       }
     });
   }

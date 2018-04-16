@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store';
 
 import { IAppState } from '../models/app.model';
@@ -15,7 +15,6 @@ export class MoviesComponent implements OnInit {
   title = 'Movies';
   description = 'Displaying all movies.';
   @select() movies: Array<IMovie>;
-  // @select() selectedMovie: IMovie;
 
   constructor(private ngRedux: NgRedux<IAppState>,
               private moviesService: MoviesService) {}
@@ -27,5 +26,9 @@ export class MoviesComponent implements OnInit {
 
   onSelect(movie: IMovie) {
     console.log('Movie:', movie);
+  }
+
+  ngOnDestroy() {
+    this.moviesService.clearMovies();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store';
 
 import { IAppState } from '../models/app.model';
@@ -21,5 +21,9 @@ export class GenresComponent implements OnInit {
   ngOnInit() {
     console.log('Genres Component');
     this.genresService.fetchGenres();
+  }
+
+  ngOnDestroy() {
+    this.genresService.clearGenres();
   }
 }
