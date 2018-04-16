@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
               private appService: AppService) {}
 
   ngOnInit() {
+    console.log('App Component');
     this.appService.fetchAppMetaData();
   }
 }
