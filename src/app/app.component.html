@@ -2,7 +2,8 @@
   <div class="container-fluid p-0">
     <div class="row no-gutters flex-nowrap align-items-center">
       <div class="px-5 py-3">
-        <a href="/">{{ title }}</a>
+        <a href="/">{{ (title | async) }}</a>
+        <p class="mb-0">{{ (description | async) }}</p>
       </div>
       <div class="flex-grow-1">
         <div class="row no-gutters flex-nowrap justify-content-between align-items-center">
@@ -35,11 +36,11 @@
           <div class="ml-auto px-4 py-3">
             <form class="input-group">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="search">{{ label }}</label>
+                <label class="input-group-text" for="search">Search Movies</label>
               </div>
-              <input class="form-control" id="search" name="search" type="search" placeholder="{{ placeholder }}">
+              <input class="form-control" id="search" name="search" type="search" placeholder="Enter a movie name">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">{{ buttonText }}</button>
+                <button class="btn btn-primary" type="button">Search</button>
               </div>
             </form>
           </div>
@@ -55,6 +56,9 @@
 
 <footer class="app-footer" role="contentinfo">
   <div class="container p-3">
-    <small>Developed by <a href="http://www.donnyburnside.com/">Donny Burnside</a>.</small>
+    <div class="row no-gutters flex-nowrap justify-content-between align-items-center">
+      <small>Developed by <a href="http://www.donnyburnside.com/">Donny Burnside</a>.</small>
+      <small>Version {{ (version | async) }}.</small>
+    </div>
   </div>
 </footer>

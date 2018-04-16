@@ -7,10 +7,13 @@ import { GenresModule } from './genres/genres.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent }  from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AppStateModule } from './store';
 
 @NgModule({
   imports: [
     BrowserModule,
+
+    AppStateModule,
     HomeModule,
     MoviesModule,
     GenresModule,

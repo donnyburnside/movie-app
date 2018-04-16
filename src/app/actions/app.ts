@@ -1,0 +1,1 @@
+export const FETCH_APP_META_DATA = 'FETCH_APP_META_DATA';

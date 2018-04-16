@@ -11,6 +11,7 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@angular-redux/store": "^7.1.1",
     "@angular/common": "^5.2.9",
     "@angular/compiler": "^5.2.9",
     "@angular/core": "^5.2.9",
@@ -20,11 +21,13 @@
     "bootstrap": "^4.1.0",
     "core-js": "^2.5.5",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "rxjs": "^5.5.8",
     "typescript": "^2.8.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "@types/redux-logger": "^3.0.5",
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
