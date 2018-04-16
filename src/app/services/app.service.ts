@@ -13,8 +13,8 @@ export class AppService {
     this.ngRedux.dispatch({
       type: FETCH_APP_META_DATA,
       payload: {
-        title: 'MoviezzZ',
-        description: 'Lorem ipsum dolar',
+        title: 'MoviezZ',
+        description: 'Awesome Movie Collection',
         version: '0.0.0'
       }
     });

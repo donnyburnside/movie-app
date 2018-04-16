@@ -13,7 +13,7 @@ declare var require: (filename: string) => any;
 })
 export class MoviesComponent implements OnInit {
   title = 'Movies';
-  description = 'Lorem ipsum dolar sit amet';
+  description = 'Displaying all movies.';
   @select() movies: Array<IMovie>;
   // @select() selectedMovie: IMovie;
 

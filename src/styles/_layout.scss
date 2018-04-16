@@ -17,4 +17,13 @@
 .app-footer {
   background-color: #fff;
   border-top: 1px solid $gray-300;
+
+  a {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: inherit;
+    }
+  }
 }

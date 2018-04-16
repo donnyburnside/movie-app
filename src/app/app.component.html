@@ -1,54 +1,46 @@
-<header class="app-header" role="banner">
-  <div class="container-fluid p-0">
-    <div class="row no-gutters flex-nowrap align-items-center">
-      <div class="px-5 py-3">
-        <a href="/">{{ (title | async) }}</a>
-        <p class="mb-0">{{ (description | async) }}</p>
-      </div>
-      <div class="flex-grow-1">
-        <div class="row no-gutters flex-nowrap justify-content-between align-items-center">
-          <div class="px-4 py-3">
-            <nav role="navigation">
-              <ul class="nav" role="menubar">
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" routerLinkActive="active" routerLink="/" title="Home" role="menuitem">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" routerLinkActive="active" routerLink="/movies" title="Movies" role="menuitem">
-                    Movies
-                  </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" routerLinkActive="active" routerLink="/genres" title="Genres" role="menuitem">
-                    Genres
-                  </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" routerLinkActive="active" routerLink="/about" title="About" role="menuitem">
-                    About
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="ml-auto px-4 py-3">
-            <form class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="search">Search Movies</label>
-              </div>
-              <input class="form-control" id="search" name="search" type="search" placeholder="Enter a movie name">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">Search</button>
-              </div>
-            </form>
-          </div>
+<nav class="app-header navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/">{{ (title | async) }}</a>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbar">
+    <ul class="navbar-nav ml-lg-5">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/" title="Home" role="menuitem">
+          Home
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/movies" title="Movies" role="menuitem">
+          Movies
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/genres" title="Genres" role="menuitem">
+          Genres
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/about" title="About" role="menuitem">
+          About
+        </a>
+      </li>
+    </ul>
+    <div class="ml-auto">
+      <form class="input-group ml-auto">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="search">Search Movies</label>
         </div>
-      </div>
+        <input class="form-control" id="search" name="search" type="search" placeholder="Enter a movie name" disabled>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" disabled>Search</button>
+        </div>
+      </form>
     </div>
   </div>
-</header>
+</nav>
 
 <main class="app-body" role="main">
   <router-outlet></router-outlet>
@@ -57,8 +49,8 @@
 <footer class="app-footer" role="contentinfo">
   <div class="container p-3">
     <div class="row no-gutters flex-nowrap justify-content-between align-items-center">
-      <small>Developed by <a href="http://www.donnyburnside.com/">Donny Burnside</a>.</small>
-      <small>Version {{ (version | async) }}.</small>
+      <small class="text-muted">Developed by <a href="http://www.donnyburnside.com/">Donny Burnside</a>.</small>
+      <small class="text-muted">v{{ (version | async) }}</small>
     </div>
   </div>
 </footer>
