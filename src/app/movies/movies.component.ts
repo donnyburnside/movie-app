@@ -14,9 +14,8 @@ declare var require: (filename: string) => any;
 export class MoviesComponent implements OnInit {
   title = 'Movies';
   description = 'Lorem ipsum dolar sit amet';
-  @select() movies: Array<any>;
-
-  selectedMovie: IMovie;
+  @select() movies: Array<IMovie>;
+  // @select() selectedMovie: IMovie;
 
   constructor(private ngRedux: NgRedux<IAppState>,
               private moviesService: MoviesService) {}
@@ -26,5 +25,7 @@ export class MoviesComponent implements OnInit {
     this.moviesService.fetchMovies();
   }
 
-  onSelect() {}
+  onSelect(movie: IMovie) {
+    console.log('Movie:', movie);
+  }
 }

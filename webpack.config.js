@@ -12,7 +12,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/[name].js'
+    filename: 'scripts/[name].js',
+    publicPath: '/'
   },
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? false : 'inline-source-map',

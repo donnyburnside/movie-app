@@ -1,9 +1,22 @@
 <div class="container py-5">
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
-  <ul>
-    <li *ngFor="let movie of (movies | async)" (click)="onSelect(movie)">
-      {{ movie.name }}
-    </li>
-  </ul>
+  <div class="row justify-content-center">
+    <div class="tile" *ngFor="let movie of (movies | async)" (click)="onSelect(movie)">
+      <img class="tile-image" [src]="('/images/movie-covers/' + movie.img)" alt="{{ movie.name }}" />
+      <div class="tile-overlay">
+        <h2 class="tile-heading">
+          {{ movie.name }}
+        </h2>
+        <span class="tile-rating">
+          <i class="fa fa-fw fa-bullseye"></i>
+          {{ movie.rate }} / 10
+        </span>
+        <span class="tile-length">
+          <i class="fa fa-fw fa-clock-o"></i>
+          {{ movie.length }}
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
