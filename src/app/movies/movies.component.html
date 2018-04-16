@@ -1,4 +1,9 @@
 <div class="container py-5">
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
+  <ul>
+    <li *ngFor="let movie of (movies | async)">
+      {{ movie.name }}
+    </li>
+  </ul>
 </div>

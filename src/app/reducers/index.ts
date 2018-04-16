@@ -1,16 +1,11 @@
-import { Action } from 'redux';
-
 import { IAppState } from '../models/app';
+import { IAppAction } from '../models/action';
 import { FETCH_APP_META_DATA } from '../actions/app';
 
-export function rootReducer(state: IAppState, action: Action): IAppState {
+export function rootReducer(state: IAppState, action: IAppAction): IAppState {
   switch (action.type) {
-      case FETCH_APP_META_DATA:
-        return Object.assign({}, state, {
-          title: 'MoviezzZ',
-          description: 'Lorem ipsum dolar',
-          version: '0.0.0'
-        })
-    }
-    return state;
+    case FETCH_APP_META_DATA:
+      return Object.assign({}, state, action.payload)
+  }
+  return state;
 }
