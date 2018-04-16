@@ -10,7 +10,8 @@ const initialState: IAppState = {
   description: '',
   version: '',
   movies: [],
-  genres: []
+  genres: [],
+  selectedMovie: null
 };
 
 @NgModule({
