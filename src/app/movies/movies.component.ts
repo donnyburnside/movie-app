@@ -13,7 +13,7 @@ declare var require: (filename: string) => any;
 })
 export class MoviesComponent implements OnInit {
   title = 'Movies';
-  description = 'Displaying all movies.';
+  description = 'Displaying all movies';
   @select() movies: Array<IMovie>;
 
   constructor(private ngRedux: NgRedux<IAppState>,

@@ -12,7 +12,7 @@ declare var require: (filename: string) => any;
 })
 export class GenresComponent implements OnInit {
   title = 'Genres';
-  description = 'Displaying all genres.';
+  description = 'Displaying all genres';
   @select() genres: Array<any>;
 
   constructor(private ngRedux: NgRedux<IAppState>,

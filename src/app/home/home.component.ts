@@ -6,8 +6,9 @@ declare var require: (filename: string) => any;
   template: require('./home.component.html')
 })
 export class HomeComponent implements OnInit {
-  title = 'Homepage';
-  description = 'Lorem ipsum dolar sit amet';
+  title = 'Awesome Movie Collection';
+  description = 'Browse the latest and greatest movies in our digital collection';
+  image = 'home-graphic.png';
 
   ngOnInit() {
     console.log('Home Component');
