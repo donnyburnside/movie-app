@@ -15,7 +15,7 @@ export class AppService {
       payload: {
         title: 'MoviezZ',
         description: 'Awesome Movie Collection',
-        version: '0.0.0'
+        version: '1.0.0'
       }
     });
   }
