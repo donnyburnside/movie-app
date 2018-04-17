@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HomeModule } from './home/home.module';
 import { MoviesModule } from './movies/movies.module';
+import { MovieDetailsModule } from './movies/movie-details.module';
 import { GenresModule } from './genres/genres.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent }  from './app.component';
@@ -16,6 +17,7 @@ import { AppStateModule } from './store';
     AppStateModule,
     HomeModule,
     MoviesModule,
+    MovieDetailsModule,
     GenresModule,
     AboutModule,
     AppRoutingModule

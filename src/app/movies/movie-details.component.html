@@ -1,0 +1,33 @@
+<div class="container py-5">
+  <h1 class="text-center">{{ title }}</h1>
+  <p class="font-weight-light text-center">{{ description }}</p>
+  <div class="row mt-5">
+    <div class="col-auto">
+      <img class="img-fluid" [src]="('/images/movie-covers/' + (selectedMovie | async).img)" alt="{{ (selectedMovie | async).name }}" />
+    </div>
+    <div class="col">
+      <h2>{{ (selectedMovie | async).name }}</h2>
+      <p>{{ (selectedMovie | async).description }}</p>
+      <hr class="my-2" />
+      <div class="row mb-5">
+        <div class="col-auto">
+          <i class="fa fa-fw fa-bullseye"></i>
+          <small class="text-muted">{{ (selectedMovie | async).rate }} / 10</small>
+        </div>
+        <div class="col-auto">
+          <i class="fa fa-fw fa-clock-o"></i>
+          <small class="text-muted">{{ (selectedMovie | async).length }}</small>
+        </div>
+        <div class="col-auto">
+          <i class="fa fa-fw fa-bookmark-o"></i>
+          <small class="text-muted">
+            <span *ngFor="let genre of (selectedMovie | async).genres">
+              {{ genre }}
+            </span>
+          </small>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" (click)="onBack()">Back to Movies Collection</button>
+    </div>
+  </div>
+</div>

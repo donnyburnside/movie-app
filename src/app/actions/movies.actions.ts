@@ -1,2 +1,4 @@
 export const FETCH_MOVIES = 'FETCH_MOVIES';
 export const CLEAR_MOVIES = 'CLEAR_MOVIES';
+export const SELECT_MOVIE = 'SELECT_MOVIE';
+export const CLEAR_SELECTED_MOVIE = 'CLEAR_SELECTED_MOVIE';

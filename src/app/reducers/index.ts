@@ -1,7 +1,7 @@
 import { IAppState } from '../models/app.model';
 import { IAppAction } from '../models/action.model';
 import { FETCH_APP_META_DATA } from '../actions/app.actions';
-import { FETCH_MOVIES, CLEAR_MOVIES } from '../actions/movies.actions';
+import { FETCH_MOVIES, CLEAR_MOVIES, SELECT_MOVIE, CLEAR_SELECTED_MOVIE } from '../actions/movies.actions';
 import { FETCH_GENRES, CLEAR_GENRES } from '../actions/genres.actions';
 
 export function rootReducer(state: IAppState, action: IAppAction): IAppState {
@@ -19,6 +19,12 @@ export function rootReducer(state: IAppState, action: IAppAction): IAppState {
       return Object.assign({}, state, action.payload)
 
     case CLEAR_MOVIES:
+      return Object.assign({}, state, action.payload)
+
+    case SELECT_MOVIE:
+      return Object.assign({}, state, action.payload)
+
+    case CLEAR_SELECTED_MOVIE:
       return Object.assign({}, state, action.payload)
   }
   return state;

@@ -9,33 +9,31 @@ import { MoviesService } from '../services/movies.service';
 declare var require: (filename: string) => any;
 
 @Component({
-  template: require('./movies.component.html'),
+  template: require('./movie-details.component.html'),
   providers: [ MoviesService ]
 })
-export class MoviesComponent implements OnInit {
-  title = 'Movies';
-  description = 'Displaying all movies';
-  @select() movies: Array<IMovie>;
+export class MovieDetailsComponent implements OnInit {
+  title = 'Movie Details';
+  description = 'Displaying the details of a single movie';
+  @select() selectedMovie: IMovie;
 
   constructor(private ngRedux: NgRedux<IAppState>,
               private moviesService: MoviesService,
               private router: Router) {}
 
   ngOnInit() {
-    console.log('Movies Component');
-    this.moviesService.fetchMovies();
+    console.log('Movie Details Component');
   }
 
-  onSelect(movie: IMovie) {
-    this.showDetails(movie);
+  onBack() {
+    this.goBack();
   }
 
-  showDetails(movie: IMovie) {
-    this.moviesService.selectMovie(movie);
-    this.router.navigate(['movies', movie.key]);
+  goBack() {
+    this.router.navigate(['movies']);
   }
 
   ngOnDestroy() {
-    this.moviesService.clearMovies();
+    this.moviesService.clearSelectedMovie();
   }
 }
